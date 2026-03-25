@@ -271,7 +271,7 @@
 	<script src="js/main.js"></script>
 
 	<script>
-		fetch("http://localhost:9999/api/categories")
+		fetch("https://tuba-1-3uzp.onrender.com/api/categories")
 			.then(res => res.json())
 			.then(data => {
 				const container = document.getElementById("categoryContainer");
@@ -296,7 +296,7 @@
 
 		// Function to load courses from API
 		function loadCourses(category = "all") {
-			fetch(`http://localhost:9999/api/courses?category=${category}`)
+			fetch(`https://tuba-1-3uzp.onrender.com/api/courses?category=${category}`)
 				.then(res => res.json())
 				.then(data => {
 					const courses = data.courses; // because API wraps courses
