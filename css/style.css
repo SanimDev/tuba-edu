@@ -290,12 +290,13 @@ ol {
 	font-size: 16px;
 	color: #fff;
 	margin-left: 45px;
-	font-weight: 600;
+	font-weight: 900;
 	padding: 20px 0 5px;
 }
 
 .main-menu ul li a:hover {
-	color: #246d2a;
+	color: #8eff97;
+	font-weight: 900;
 }
 
 .header-btn {
