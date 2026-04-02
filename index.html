@@ -123,8 +123,11 @@
 		<div class="container">
 			<div class="section-title">
 				<h2>Our Course Categories</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris
-					scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+				<p> Discover our featured courses designed to help you build strong skills in English, Arabic, and
+					Computer studies.
+					Each course is carefully structured to provide practical knowledge, improve confidence, and prepare
+					you for
+					real-world success.</p>
 			</div>
 			<div class="row" id="categoryContainer"></div>
 
@@ -165,10 +168,10 @@
 		<div class="course-warp">
 			<ul class="course-filter controls">
 				<li class="control active" data-filter="all">All</li>
-				<li class="control" data-filter="finance">Finance</li>
-				<li class="control" data-filter="design">Design</li>
-				<li class="control" data-filter="web">Web Development</li>
-				<li class="control" data-filter="photo">Photography</li>
+				<li class="control" data-filter="arabic">Arabic</li>
+				<li class="control" data-filter="english">English</li>
+				<li class="control" data-filter="computer">Computer</li>
+				
 			</ul>
 			<div class="row course-items-area" id="courseContainer"></div>
 		</div>
@@ -301,8 +304,28 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
 
-	<script>
+	<!-- <script>
 		fetch("https://tuba-1-3uzp.onrender.com/api/categories")
+			.then(res => res.json())
+			.then(data => {
+				const container = document.getElementById("categoryContainer");
+
+				container.innerHTML = data.map(c => `
+      <div class="card-item-category col-lg-4 col-md-6">
+        <div class="categorie-item">
+          <div class="ci-thumb" style="background-image:url('${c.imageUrl}')"></div>
+          <div class="ci-text">
+            <h5>${c.name}</h5>
+            <p>${c.description}</p>
+            <span>${c.totalCourses} Courses</span>
+          </div>
+        </div>
+      </div>
+    `).join("");
+			});
+	</script> -->
+	<script>
+		fetch("http://localhost:9999/api/categories")
 			.then(res => res.json())
 			.then(data => {
 				const container = document.getElementById("categoryContainer");
